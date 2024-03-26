@@ -1,0 +1,232 @@
+:root {
+    /*Light theme*/
+    --bg-l-theme: url(img/Templo_diurno.jpg);
+    --bg-container-l-theme: #ffffff;
+    --font-l-theme: #000000;
+    --btn-l-theme: #51e2f5;
+    --btn-change-l-theme: #000000;
+    --icon-l-color: none;
+    --li-even-l:#fae1d1;
+    --li-odd-l:#d2e8b7;
+
+    /*Dark theme*/
+    --bg-d-theme: url(img/Templo_nocturno.jpg);
+    --bg-container-d-theme: #312d3a;
+    --font-d-theme: #ffffff;
+    --btn-d-theme: #a688fa;
+    --btn-change-d-theme: #312d3a;
+    --icon-d-color: invert();
+    --li-even-d:#b74c55;
+    --li-odd-d:#111944;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bgImg) no-repeat center;
+    background-size: cover;
+    color: var(--fontColor);
+    font-family: monospace;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.light-theme {
+    --bgImg: #69c7bd var(--bg-l-theme);
+    --bgContainer: var(--bg-container-l-theme);
+    --fontColor: var(--font-l-theme);
+    --btn-homework: var(--btn-l-theme);
+    --btn-styleColor: var(--btn-change-l-theme);
+    --iconColor: var(--icon-l-color);
+    --evenBg: var(--li-even-l);
+    --oddBg:var(--li-odd-l);
+}
+  
+.dark-theme {
+    --bgImg: #000000 var(--bg-d-theme);
+    --bgContainer: var(--bg-container-d-theme);
+    --fontColor: var(--font-d-theme);
+    --btn-homework: var(--btn-d-theme);
+    --btn-styleColor: var(--btn-change-d-theme);
+    --iconColor: var(--icon-d-color);
+    --evenBg:var(--li-even-d);
+    --oddBg:var(--li-odd-d);
+}
+
+.btn-style {
+    background-color: var(--btn-styleColor);
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    left: 75%;
+    top: 10px;
+    font: 18px bolder;
+    border: solid;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 700px;
+    width: 75%;
+    justify-content: space-between;
+    background: var(--bgContainer);
+    margin: 10% 1%;
+    border-radius: 20px; 
+}
+
+
+/*Titulo*/
+
+h1 {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.icon-text {
+    height: 3rem;
+    margin-left: 30px;
+    filter: var(--iconColor);
+}
+
+
+/*Entrada de datos*/
+
+.add-info-homework {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.add-info-homework input {
+    border-radius: 20px 0 0 20px;
+    border: none;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.add-info-homework button {
+    border-radius: 0 15px 15px 0;
+    border: none;
+    width: 80px;
+    background-color: #328084;
+    font-size: 1.2em;
+    color: #ffffff;
+
+}
+
+#alert-empty {
+    display: none;
+}
+
+/*Lista de tareas*/
+
+.contain-list {
+    width: 70%;
+    height: 70%;
+    overflow-y: scroll;
+    text-align: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+li {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+}
+
+li:nth-child(even) {
+    background-color: var(--evenBg);
+}
+
+li:nth-child(odd) {
+    background-color: var(--oddBg);
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.btn-remove-item {
+    float: right;
+    border-radius: 50%;
+    width: 32px;
+    background-color: #328084;
+}
+
+/* Adaptabilidad*/
+
+@media screen and (min-width: 427px) and (max-width: 800px) {
+    
+    .container {
+        margin-bottom: 140px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .icon-text {
+        height: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .contain-list {
+        width: 95%;
+    }
+
+    li {
+        font-size: 2.3em;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    
+    body {
+        margin-top: 50px;
+    }
+
+    .container {
+        width: 90%;
+        margin-bottom: 120px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    .icon-text {
+        height: 1.9rem;
+        margin-left: 10px;
+    }
+
+    .add-info-homework input {
+        width: 70%;
+    }
+
+    .contain-list {
+        width: 95%;
+    }
+}
