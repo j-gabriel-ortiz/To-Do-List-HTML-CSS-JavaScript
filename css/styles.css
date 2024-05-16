@@ -1,6 +1,6 @@
 :root {
     /*Light theme*/
-    --bg-l-theme: url(img/Templo_diurno.jpg);
+    --bg-l-theme: url(../img/Templo_diurno.jpg);
     --bg-container-l-theme: #ffffff;
     --font-l-theme: #000000;
     --btn-l-theme: #51e2f5;
@@ -10,7 +10,7 @@
     --li-odd-l:#d2e8b7;
 
     /*Dark theme*/
-    --bg-d-theme: url(img/Templo_nocturno.jpg);
+    --bg-d-theme: url(../img/Templo_nocturno.jpg);
     --bg-container-d-theme: #312d3a;
     --font-d-theme: #ffffff;
     --btn-d-theme: #a688fa;
